@@ -20,4 +20,4 @@ exports.connection.query('SELECT * FROM messages', function(err, rows, cols){
   console.log('The message in the first column is' + rows[0].message)
 })
 
-exports.connection.end();
+// exports.connection.end();
