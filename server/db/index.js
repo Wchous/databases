@@ -11,13 +11,13 @@ exports.connection = mysql.createConnection({
   database  : 'chat' 
 })
 
-connection.connect();
+exports.connection.connect();
 
-connection.query('SELECT * FROM messages', function(err, rows, cols){
+exports.connection.query('SELECT * FROM messages', function(err, rows, cols){
   if (err){
     console.log('there has been an error');
   }
   console.log('The message in the first column is' + rows[0].message)
 })
 
-connection.end();
+exports.connection.end();
